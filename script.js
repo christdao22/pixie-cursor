@@ -29,7 +29,6 @@ $(function () {
         return glow
     }
 
-
     let lastOffset = { x: 0, y: 0 }
     let currOffset = { x: 0, y: 0 }
     document.addEventListener("mousemove", function(e) {
@@ -40,12 +39,14 @@ $(function () {
             mouseX: e.clientX,
         }
 
+        // Glow Effect
         const glow = createGlow(config)
         setTimeout(function () {
             glow?.remove();
         }, 100)
         $('#container').append(glow)
         
+        // Dot
         currOffset = { x: config.mouseX, y: config.mouseY}
         if(distanceCal(currOffset, lastOffset)>50) {
             const dot1 = createDot(config)
