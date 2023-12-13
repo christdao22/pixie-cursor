@@ -13,10 +13,10 @@
 .dot {
     position: absolute;
     font-size: 10px;
-    animation: fall 1s infinite;
+    animation-fill-mode: forwards;
 }
 
-@keyframes fall {
+@keyframes fall-1 {
     0% {
         transform: translate(0, 0);
         opacity: 1;
@@ -27,3 +27,29 @@
         opacity: 0;
     }
 }
+
+@keyframes fall-2 {
+    0% {
+        transform: rotate(0), translate(0, 0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(0.05turn) translate(0, 100px) skew(20deg, 30deg);;
+        opacity: 0;
+    }
+}
+
+@keyframes fall-3 {
+    0% {
+        transform: scale(1), translate(0, 0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.5) translate(0, 100px);
+        opacity: 0;
+    }
+}
+
+
