@@ -16,6 +16,23 @@
     animation-fill-mode: forwards;
 }
 
+.glow {
+    position: absolute;
+    box-shadow: 0rem 0rem 0.5rem 0.6rem rgb(183,91,242);
+    animation: glow 0.2s infinite;
+}
+
+@keyframes glow {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
 @keyframes fall-1 {
     0% {
         transform: translate(0, 0);
